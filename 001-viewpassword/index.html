@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+    <main>
+    <form id="Form1">
+    <input type="password" id="password" />
+    <button type="button" id="trigger">View Password</button>
+    </form>
+    </main>
+<script type="text/javascript">
+(function(){
+    var FormElement = document.getElementById("Form1");//memasukkan element Form1 kedalam variabel
+    var ViewPassword = false; // status sembunyikan atau lihat password
+    FormElement.querySelector("#trigger").addEventListener("click", function(){
+        if(!ViewPassword){
+            //memperlihatkan password
+            FormElement.querySelector("#password").setAttribute("type", "text");
+            FormElement.querySelector("#trigger").innerText = "Sembunyikan Password";
+            ViewPassword = true;
+        } else {
+            //menyembunyikan password
+            FormElement.querySelector("#password").setAttribute("type", "password");
+            FormElement.querySelector("#trigger").innerText = "Lihat Password";
+            ViewPassword = false;
+        }
+    });
+})()/*memanggil function yang baru saja dibuat*/;
+</script>
+</body>
+</html>
