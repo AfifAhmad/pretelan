@@ -1,7 +1,8 @@
 package main
 
-import printer "fmt"
+import "fmt"
 
 func main() {
-	printer.Println("Hello World!")
+	fmt.Println("Hello World!")
 }
+
